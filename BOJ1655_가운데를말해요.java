@@ -15,7 +15,7 @@ public class BOJ1655_가운데를말해요 {
         int mid = left.peek();
         for (int i = 1; i < N; i++) {
             int n = Integer.parseInt(input.readLine());
-            if((left.size()+ right.size())%2==0 || left.size() > right.size()) {
+            if ((left.size() + right.size()) % 2 == 0 || left.size() > right.size()) {
                 mid = left.peek();
             } else {
                 mid = right.peek();
@@ -26,16 +26,16 @@ public class BOJ1655_가운데를말해요 {
                 left.offer(n);
             }
             if ((left.size() + right.size()) % 2 == 0) {
-                if(left.size() > right.size()) {
+                if (left.size() > right.size()) {
                     right.offer(left.poll());
-                } else if(left.size() < right.size()) {
+                } else if (left.size() < right.size()) {
                     left.offer(right.poll());
                 }
                 answer.append(left.peek()).append("\n");
             } else {
-                if(left.size() > right.size()) {
+                if (left.size() > right.size()) {
                     answer.append(left.peek()).append("\n");
-                } else if(left.size() < right.size()) {
+                } else if (left.size() < right.size()) {
                     answer.append(right.peek()).append("\n");
                 }
             }

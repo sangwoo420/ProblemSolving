@@ -23,7 +23,6 @@ public class BOJ2866_문자열잘라내기 {
             appearSet.add(s.toString());
         }
         for (int r = 1; r < R; r++) {
-            Map<String, Boolean> tmpMap = new HashMap<>();
             appearSet = appearSet.stream().map((s -> s.substring(1))).collect(Collectors.toSet());
             if(appearSet.size() != C) {
                 break;
